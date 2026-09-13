@@ -36,7 +36,7 @@ async function renderKiosk(){
       </div>
       <div class="kiosk-title-block">
         
-        <h1>GENERAR TURNO</h1>
+        <h1>Generar Turno</h1>
         <p>Seleccione el servicio, registre el nombre del usuario y genere el turno de atención.</p>
       </div>
       <a class="btn btn-outline" href="login.html">Administración</a>
