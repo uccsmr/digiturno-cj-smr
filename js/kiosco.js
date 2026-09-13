@@ -35,8 +35,8 @@ async function renderKiosk(){
         <img class="kiosk-logo-clinic" src="${escapeHtml(appConfig.logo_pantalla || 'assets/img/logo_consultorio_juridico.png')}" alt="Consultorio Jurídico">
       </div>
       <div class="kiosk-title-block">
-        <span class="eyebrow">Digiturno Jurídico UCC</span>
-        <h1>Kiosco de turnos</h1>
+        <span class="eyebrow">Digiturno Consultorio Jurídico UCC</span>
+        <h1>GENERADOR DE TURNOS</h1>
         <p>Seleccione el servicio, registre el nombre del usuario y genere el turno de atención.</p>
       </div>
       <a class="btn btn-outline" href="login.html">Administración</a>
