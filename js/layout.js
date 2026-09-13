@@ -70,7 +70,8 @@ export async function renderProtectedPage({ active, allowedRoles = ['Administrad
           <div class="brand admin-brand">
             <div class="brand-logo"><img src="${logo}" alt="Universidad Cooperativa de Colombia"></div>
             <div>
-              //<strong>Digiturno Jurídico</strong>
+
+              
               <small>${escapeHtml(profile.rol)}</small>
             </div>
           </div>
