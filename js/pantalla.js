@@ -100,24 +100,43 @@ function startClock(){
   clockTimer = setInterval(paint, 30000);
 }
 
+
 function setupCarousel(){
-  const raw = appConfig.imagenes_pantalla || appConfig.videos_pantalla || '';
-  carousel = String(raw).split(/\n|,|;/).map(x => x.trim()).filter(Boolean)
-    .filter(path => !/\.mp4($|\?)/i.test(path));
+  const raw = appConfig.imagenes_pantalla || '';
+
+  carousel = String(raw)
+    .split(/[\n\r,; ]+/)
+    .map(x => x.trim())
+    .filter(Boolean)
+    .filter(path => {
+      const fileName = path.split('/').pop().toLowerCase();
+
+      return (
+        fileName.startsWith('carrusel-') &&
+        /\.(jpg|jpeg|png|webp)$/i.test(fileName) &&
+        !/\.mp4($|\?)/i.test(fileName)
+      );
+    });
+
   if (!carousel.length) {
     carousel = [
-      'assets/img/logo_ucc_horizontal.png',
-      'assets/img/logo_consultorio_juridico.png'
+      'assets/img/carrusel-1.jpg',
+      'assets/img/carrusel-2.jpg',
+      'assets/img/carrusel-3.jpg',
+      'assets/img/carrusel-4.jpg'
     ];
   }
+
   carouselIndex = 0;
   renderCarousel();
+
   clearInterval(carouselTimer);
   carouselTimer = setInterval(() => {
     carouselIndex = (carouselIndex + 1) % carousel.length;
     renderCarousel();
   }, 6500);
 }
+
 
 function renderCarousel(){
   const box = $('#imageCarousel');
