@@ -36,8 +36,7 @@ async function renderScreen(){
             <strong>${escapeHtml(message.replace(/^Bienvenido\.\s*/i, ''))}</strong>
           </div>
           <div class="tv-clock-premium">
-            <strong id="tvClock">--:--</strong>
-            <span id="tvDate">--</span>
+                <button class="tv-sound-btn is-on" id="soundBtn" type="button">🔊 Sonido activo</button>
           </div>
         </header>
 
