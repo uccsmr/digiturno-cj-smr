@@ -32,7 +32,7 @@ async function renderScreen(){
             <img class="tv-logo-clinic" src="${escapeHtml(appConfig.logo_pantalla || 'assets/img/logo_consultorio_juridico.png')}" alt="Consultorio Jurídico">
           </div>
           <div class="tv-welcome-premium">
-            <span>Bienvenido</span>
+      
             <strong>${escapeHtml(message.replace(/^Bienvenido\.\s*/i, ''))}</strong>
           </div>
           <div class="tv-clock-premium">
